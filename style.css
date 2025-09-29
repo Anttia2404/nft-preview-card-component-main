@@ -1,0 +1,153 @@
+:root {
+  --blue-500: hsl(215, 51%, 70%);
+  --cyan-400: hsl(178, 100%, 50%);
+
+  --blue-950: hsl(217, 54%, 11%); /* main BG */
+  --blue-900: hsl(216, 50%, 16%); /* card BG */
+  --blue-800: hsl(215, 32%, 27%); /* line */
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--blue-950);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: "Outfit", sans-serif;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--blue-900);
+    max-width: 450px;
+    padding: 35px;
+    border-radius: 15px;
+    gap: 20px
+}
+
+.contai-img{
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.main-img {
+    width: 100%;
+}
+
+.contai-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+}
+
+.equi {
+    color: white;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+p {
+    color: var(--blue-500);
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.eth {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    height: 100%;
+    font-weight: 600;
+}
+
+
+.eth-left {
+    color: var(--cyan-400);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+
+.eth-right {
+    color: var(--blue-500);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 400;
+}
+
+.container hr {
+    border: none;
+    height: 2px;
+    background-color: var(--blue-800);
+}
+
+.creation {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.creation img {
+    width: 30px;
+    height: auto;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.span-blue {
+    color: var(--blue-500);
+}
+
+.span-white {
+    color: white;
+}
+
+.attribution {
+    margin-top: 20px;
+}
+
+.overplay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(178, 100%, 50%, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contai-img:hover .overplay {
+    opacity: 1;
+    cursor: pointer;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+    .equi {
+        font-size: 23px;
+    }
+
+    p {
+        font-size: 17px;
+    }
+}
